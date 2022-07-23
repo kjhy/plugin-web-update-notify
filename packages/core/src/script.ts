@@ -3,9 +3,7 @@ import { CUSTOM_UPDATE_EVENT_NAME, JSON_FILE_NAME, NOTIFY_CLASS_NAME } from './c
 
 // bind notify click event, click to refresh page
 const anchor = document.querySelector(`.${NOTIFY_CLASS_NAME}`)
-anchor?.addEventListener('click', () => {
-  window.location.reload()
-})
+anchor?.addEventListener('click', () => window.location.reload())
 
 /**
  * It checks whether the system has been updated and if so, it shows a notify.
@@ -16,9 +14,7 @@ function webUpdateCheck_checkAndNotice(options: Options) {
     window
       .fetch(`./${JSON_FILE_NAME}.json?t=${Date.now()}`)
       .then((response) => {
-        if (!response.ok)
-          throw new Error(`Failed to fetch ${JSON_FILE_NAME}.json`)
-
+        if (!response.ok) throw new Error(`Failed to fetch ${JSON_FILE_NAME}.json`)
         return response.json()
       })
       .then((res) => {
@@ -74,16 +70,16 @@ function webUpdateCheck_showNotify(options: Options) {
     const title = notifyProps?.title || '📢 &nbsp;系统升级通知'
     const description = notifyProps?.description || '检测到当前系统版本已更新，请刷新页面后使用。'
     const buttonText = notifyProps?.buttonText || '刷新'
-    notify.classList.add('vite-plugin-web-update-notice')
+    notify.classList.add('plugin-web-update-notify-box')
     notifyInnerHTML = `
-    <div class="vite-plugin-web-update-notice-content" data-cy="notify-content">
-      <div class="vite-plugin-web-update-notice-content-title">
+    <div class="plugin-web-update-notify-content" data-cy="notify-content">
+      <div class="plugin-web-update-notify-content-title">
         ${title}
       </div>
-      <div class="vite-plugin-web-update-notice-content-desc">
+      <div class="plugin-web-update-notify-content-desc">
         ${description}
       </div>
-      <a class="vite-plugin-web-update-notice-refresh-btn">
+      <a class="plugin-web-update-notify-content-btn">
         ${buttonText}
       </a>
     </div>`

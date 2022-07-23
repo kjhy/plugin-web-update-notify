@@ -1,42 +1,43 @@
-.plugin-web-update-notice-anchor {
+.plugin-web-update-notify {
   cursor: pointer;
 }
-.vite-plugin-web-update-notice {
+.plugin-web-update-notify-box {
   position: fixed;
+  z-index: 999;
   right: 24px;
   bottom: 24px;
   user-select: none;
 }
-.vite-plugin-web-update-notice-content {
-  background-color: #fff;
-  border-radius: 4px;
-  color: #000000d9;
-  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+.plugin-web-update-notify-content {
   padding: 12px 16px;
-  line-height: 1.5715;
   width: 280px;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  line-height: 1.5715;
+  color: #000000d9;
+  background-color: #fff;
 }
-.vite-plugin-web-update-notice-content-title {
-  font-weight: 500;
+.plugin-web-update-notify-content-title {
   margin-bottom: 8px;
   font-size: 15px;
+  font-weight: 500;
   line-height: 24px;
 }
-.vite-plugin-web-update-notice-content-desc {
+.plugin-web-update-notify-content-desc {
   font-size: 13px;
   line-height: 24px;
 }
-.vite-plugin-web-update-notice-refresh-btn {
+.plugin-web-update-notify-btn {
   position: absolute;
   top: 8px;
   right: 8px;
   padding: 8px 12px;
-  line-height: 1;
   border-radius: 4px;
-  transition: background-color .2s linear;
+  line-height: 1;
   color: #1890ff;
+  transition: background-color .2s linear;
 }
 
-.vite-plugin-web-update-notice-refresh-btn:hover {
-  background-color: rgba(64,87,109,.1);
+.plugin-web-update-notify-btn:hover {
+  background-color: rgba(64, 87, 109, .1);
 }
