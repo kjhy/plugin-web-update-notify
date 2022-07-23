@@ -75,7 +75,7 @@ class WebUpdateNotifyPlugin {
 
       const jsonFileContent = generateJSONFileContent(version)
       // @ts-expect-error
-      compilation.assets[`${JSON_FILE_NAME}.json`] = {
+      compilation.assets[`static/${JSON_FILE_NAME}.json`] = {
         source: () => jsonFileContent,
         size: () => jsonFileContent.length,
       }
@@ -83,7 +83,7 @@ class WebUpdateNotifyPlugin {
       if (!hiddenDefaultNotify) {
         const injectStyleContent = readFileSync(`${get__Dirname()}/${INJECT_STYLE_FILE_NAME}.css`, 'utf8')
         // @ts-expect-error
-        compilation.assets[`${INJECT_STYLE_FILE_NAME}.css`] = {
+        compilation.assets[`css/${INJECT_STYLE_FILE_NAME}.css`] = {
           source: () => injectStyleContent,
           size: () => injectStyleContent.length,
         }
@@ -91,7 +91,7 @@ class WebUpdateNotifyPlugin {
 
       const injectScriptContent = generateScriptContent(this.options, version)
       // @ts-expect-error
-      compilation.assets[`${INJECT_SCRIPT_FILE_NAME}.js`] = {
+      compilation.assets[`js/${INJECT_SCRIPT_FILE_NAME}.js`] = {
         source: () => injectScriptContent,
         size: () => injectScriptContent.length,
       }

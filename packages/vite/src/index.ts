@@ -66,7 +66,7 @@ export function webUpdateNotice(options: Options = {}): Plugin {
         type: 'asset',
         name: undefined,
         source: generateJSONFileContent(version),
-        fileName: `${JSON_FILE_NAME}.json`,
+        fileName: `static/${JSON_FILE_NAME}.json`,
       }
 
       // inject css file
@@ -75,7 +75,7 @@ export function webUpdateNotice(options: Options = {}): Plugin {
         type: 'asset',
         name: undefined,
         source: readFileSync(`${resolve(get__Dirname(), INJECT_STYLE_FILE_NAME)}.css`, 'utf8').toString(),
-        fileName: `${INJECT_STYLE_FILE_NAME}.css`,
+        fileName: `css/${INJECT_STYLE_FILE_NAME}.css`,
       }
 
       // inject js file
@@ -87,7 +87,7 @@ export function webUpdateNotice(options: Options = {}): Plugin {
         `${readFileSync(`${resolve(get__Dirname(), INJECT_SCRIPT_FILE_NAME)}.js`, 'utf8').toString()}
         window.webUpdateNotifyVersion = "${version}";
         webUpdateCheck_checkAndNotice(${JSON.stringify(options)});`,
-        fileName: `${INJECT_SCRIPT_FILE_NAME}.js`,
+        fileName: `js/${INJECT_SCRIPT_FILE_NAME}.js`,
       }
     },
 
