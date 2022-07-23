@@ -1,0 +1,40 @@
+{
+  "name": "@plugin-web-update-notify/core",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Detect web page updates and notify",
+  "author": "Utopia",
+  "license": "MIT",
+  "homepage": "https://github.com/kjhy/plugin-web-update-notify",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjhy/plugin-web-update-notify",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/kjhy/plugin-web-update-notify/issues"
+  },
+  "keywords": [
+    "web-update-notify"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "esno src/index.ts",
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "devDependencies": {}
+}
