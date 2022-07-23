@@ -9,8 +9,8 @@ const dests = [
   ['../README.md', '../packages/core/README.md'],
   ['../LICENSE', '../packages/vite/LICENSE'],
   ['../README.md', '../packages/vite/README.md'],
-  ['../LICENSE', '../packages/umi/LICENSE'],
-  ['../README.md', '../packages/umi/README.md'],
+  ['../LICENSE', '../packages/umijs/LICENSE'],
+  ['../README.md', '../packages/umijs/README.md'],
   ['../LICENSE', '../packages/webpack/LICENSE'],
   ['../README.md', '../packages/webpack/README.md'],
 ]

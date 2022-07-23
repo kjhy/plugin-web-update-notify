@@ -150,7 +150,7 @@ importers:
   packages/core:
     specifiers: {}
 
-  packages/umi:
+  packages/umijs:
     specifiers:
       '@plugin-web-update-notify/core': workspace:*
       umi: ^4.0.2
