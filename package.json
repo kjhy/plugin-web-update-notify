@@ -1,6 +1,6 @@
 {
   "name": "plugin-web-update-notify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Web 页面更新通知插件",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -35,8 +35,8 @@
     "plugin-web-update-notify"
   ],
   "type": "module",
-  "packageManager": "pnpm@7.2.1",
   "sideEffects": false,
+  "packageManager": "pnpm@7.2.1",
   "scripts": {
     "build": "pnpm --filter=./packages/** build",
     "dev:vite": "pnpm --filter=@plugin-web-update-notify/vite dev",

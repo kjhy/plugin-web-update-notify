@@ -1,25 +1,13 @@
 {
   "name": "@plugin-web-update-notify/umijs",
-  "version": "0.4.2",
-  "description": "Umi plugin for detect web page updates and notify.",
-  "author": "Utopia",
-  "license": "MIT",
-  "homepage": "https://github.com/kjhy/plugin-web-update-notify",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kjhy/plugin-web-update-notify",
-    "directory": "packages/umi-plugin"
-  },
-  "bugs": {
-    "url": "https://github.com/kjhy/plugin-web-update-notify/issues"
-  },
-  "keywords": [
-    "umi",
-    "umi-plugin",
-    "@plugin-web-update-notify/core",
-    "web-update-notify"
+  "version": "1.0.1",
+  "description": "Web 页面更新通知插件",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
   ],
-  "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -27,12 +15,22 @@
       "import": "./dist/index.mjs"
     }
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
+  "author": "Steven",
+  "license": "MIT",
+  "homepage": "https://github.com/kjhy/plugin-web-update-notify",
+  "bugs": "https://github.com/kjhy/plugin-web-update-notify/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjhy/plugin-web-update-notify",
+    "directory": "packages/umi"
+  },
+  "keywords": [
+    "umi",
+    "umi-plugin",
+    "@plugin-web-update-notify/umijs",
+    "web-update-notify"
   ],
+  "sideEffects": false,
   "scripts": {
     "start": "esno src/index.ts",
     "build": "tsup",
