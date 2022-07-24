@@ -1,6 +1,6 @@
 {
   "name": "plugin-web-update-notify",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Web 页面更新通知插件",
   "sideEffects": false,
   "main": "./dist/index.js",
