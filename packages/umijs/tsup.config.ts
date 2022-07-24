@@ -13,6 +13,6 @@ export default defineConfig((options) => { // The options here is derived from C
     dts: true,
     format: ['cjs', 'esm'],
     minify: !options.watch,
-    onSuccess: `node ${resolve('node_modules', pkgName, 'dist', 'build.js')}`,
+    onSuccess: `node ${resolve('node_modules', pkgName, 'dist', 'script.js')}`,
   }
 })

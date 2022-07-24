@@ -1,12 +1,12 @@
 import { defineConfig } from 'tsup'
-import { INJECT_SCRIPT_FILE_NAME } from './src/constant'
+import { INJECT_SCRIPT_FILE_NAME, INJECT_STYLE_FILE_NAME } from './src/constant'
 
 export default defineConfig((options) => { // The options here is derived from CLI flags.
   return {
     entry: {
       index: 'src/index.ts',
-      [INJECT_SCRIPT_FILE_NAME]: 'src/script.ts',
-      build: 'src/build.ts',
+      [INJECT_SCRIPT_FILE_NAME]: 'src/notify.ts',
+      script: 'src/script.ts',
     },
     splitting: false,
     sourcemap: true,
@@ -14,6 +14,6 @@ export default defineConfig((options) => { // The options here is derived from C
     dts: true,
     format: ['cjs', 'esm'],
     minify: !options.watch,
-    onSuccess: 'cp -a public/. dist',
+    onSuccess: `stylus -c src/notify.styl -o dist/${INJECT_STYLE_FILE_NAME}.css`,
   }
 })

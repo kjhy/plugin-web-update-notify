@@ -15,6 +15,6 @@ export default defineConfig((options) => { // The options here is derived from C
     minify: !options.watch,
 
     // after bundle success, run script, copy inject file from @plugin-web-update-notify/core
-    onSuccess: `node ${resolve('node_modules', pkgName, 'dist', 'build.js')}`,
+    onSuccess: `node ${resolve('node_modules', pkgName, 'dist', 'script.js')}`,
   }
 })
