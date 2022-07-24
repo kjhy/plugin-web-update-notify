@@ -1,7 +1,8 @@
 {
   "name": "plugin-web-update-notify",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Web 页面更新通知插件",
+  "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -34,8 +35,6 @@
   "keywords": [
     "plugin-web-update-notify"
   ],
-  "type": "module",
-  "sideEffects": false,
   "packageManager": "pnpm@7.2.1",
   "scripts": {
     "build": "pnpm --filter=./packages/** build",
