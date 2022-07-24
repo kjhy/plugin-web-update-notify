@@ -2,8 +2,8 @@ import type { Options } from './type'
 import { CUSTOM_UPDATE_EVENT_NAME, JSON_FILE_NAME, NOTIFY_CLASS_NAME } from './constant'
 
 // bind notify click event, click to refresh page
-const anchor = document.querySelector(`.${NOTIFY_CLASS_NAME}`)
-anchor?.addEventListener('click', () => window.location.reload())
+const notify = document.querySelector(`.${NOTIFY_CLASS_NAME}`)
+notify?.addEventListener('click', () => window.location.reload())
 
 /**
  * It checks whether the system has been updated and if so, it shows a notify.
