@@ -1,6 +1,6 @@
 {
   "name": "@plugin-web-update-notify/vite",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Web 页面更新通知插件",
   "type": "module",
   "sideEffects": false,
