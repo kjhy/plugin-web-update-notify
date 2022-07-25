@@ -24,8 +24,8 @@ function webUpdateCheck_checkAndNotice(options: Options) {
             bubbles: true,
           }))
           if (!window.hasShowSystemUpdateNotice_plugin && !options.hiddenDefaultNotify) {
-            webUpdateCheck_showNotify(options)
             // console.info('system has update！！！')
+            webUpdateCheck_showNotify(options)
           }
         }
       })
@@ -79,7 +79,7 @@ function webUpdateCheck_showNotify(options: Options) {
       <div class="plugin-web-update-notify-content-desc">
         ${description}
       </div>
-      <a class="plugin-web-update-notify-content-btn">
+      <a href="javascript:location.reload()" class="plugin-web-update-notify-content-btn">
         ${buttonText}
       </a>
     </div>`
