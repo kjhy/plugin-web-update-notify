@@ -63,7 +63,7 @@ export default (api: IApi) => {
     return [
       {
         rel: 'stylesheet',
-        href: `css/${INJECT_STYLE_FILE_NAME}.css?t=${Date.now()}`,
+        href: `/css/${INJECT_STYLE_FILE_NAME}.css?t=${Date.now()}`,
       },
     ]
   })
@@ -90,7 +90,7 @@ export default (api: IApi) => {
 
   api.modifyHTML(($) => {
     if (!hiddenDefaultNotify) $('body').append(`<div class="${NOTIFY_CLASS_NAME}"></div></body>`)
-    $('body').append(`<script type="module" crossorigin async src="js/${INJECT_SCRIPT_FILE_NAME}.js?t=${Date.now()}"></script>`)
+    $('body').append(`<script type="module" crossorigin async src="/js/${INJECT_SCRIPT_FILE_NAME}.js?t=${Date.now()}"></script>`)
     return $
   })
 }

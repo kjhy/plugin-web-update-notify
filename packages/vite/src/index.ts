@@ -24,13 +24,13 @@ function injectPluginHtml(html: string, version: string, options: Options) {
   const { logVersion, customNotifyHTML, hiddenDefaultNotify } = options
 
   const logHtml = logVersion ? `<script>console.log('version: %c${version}', 'color: #1890ff');</script>` : ''
-  const cssLinkHtml = customNotifyHTML || hiddenDefaultNotify ? '' : `<link rel="stylesheet" href="css/${INJECT_STYLE_FILE_NAME}.css?t=${Date.now()}">`
+  const cssLinkHtml = customNotifyHTML || hiddenDefaultNotify ? '' : `<link rel="stylesheet" href="/css/${INJECT_STYLE_FILE_NAME}.css?t=${Date.now()}">`
   let res = html
 
   res = res.replace(
     '</head>',
     `${cssLinkHtml}
-    <script type="module" crossorigin async src="js/${INJECT_SCRIPT_FILE_NAME}.js?t=${Date.now()}"></script>
+    <script type="module" crossorigin async src="/js/${INJECT_SCRIPT_FILE_NAME}.js?t=${Date.now()}"></script>
     ${logHtml}
   </head>
     `,

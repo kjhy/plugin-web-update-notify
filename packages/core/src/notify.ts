@@ -12,7 +12,7 @@ notify?.addEventListener('click', () => window.location.reload())
 function webUpdateCheck_checkAndNotice(options: Options) {
   const checkSystemUpdate = () => {
     window
-      .fetch(`./static/${JSON_FILE_NAME}.json?t=${Date.now()}`)
+      .fetch(`/static/${JSON_FILE_NAME}.json?t=${Date.now()}`)
       .then((response) => {
         if (!response.ok) throw new Error(`Failed to fetch ${JSON_FILE_NAME}.json`)
         return response.json()
